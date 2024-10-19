@@ -96,4 +96,20 @@ The `PriorityQueue` class in `priority_queue.py` implements a priority queue usi
 
 This implementation showcases the use of a heap for efficient priority queue operations.
 
+## Hash Table
+
+The `HashTable` class in `hash_table.py` implements a basic hash table (also known as a hash map) using separate chaining for collision resolution. The hash table supports the following operations:
+
+- `insert(key, value)`: Adds a key-value pair to the hash table or updates the value if the key already exists. Time complexity: O(1) average case, O(n) worst case where n is the number of items in the bucket.
+- `get(key)`: Retrieves the value associated with the given key. Time complexity: O(1) average case, O(n) worst case.
+- `remove(key)`: Removes a key-value pair from the hash table. Time complexity: O(1) average case, O(n) worst case.
+
+The implementation uses a simple hash function based on Python's built-in `hash()` function and the modulo operator. It demonstrates:
+
+- The use of separate chaining to handle collisions.
+- Dynamic resizing is not implemented, showcasing a basic fixed-size hash table.
+- Key concepts such as hash functions, collision resolution, and basic hash table operations.
+
+This hash table implementation provides a foundation for understanding hash-based data structures and can be extended to include more advanced features like dynamic resizing and alternative collision resolution strategies.
+
 These data structure implementations provide a solid foundation for understanding core computer science concepts and can be used as building blocks for more complex algorithms and applications.

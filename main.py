@@ -5,6 +5,7 @@ from binary_tree import BinaryTree
 from graph import Graph
 from heap import MinHeap, MaxHeap
 from priority_queue import PriorityQueue
+from hash_table import HashTable
 
 def main():
     # LinkedList demonstration
@@ -96,6 +97,38 @@ def main():
     print("\nDequeuing tasks:")
     while not pq.is_empty():  # is_empty(): O(1) time, O(1) space
         print(f"Dequeued: {pq.dequeue()}")  # O(log n) time, O(1) space
+
+    # HashTable demonstration
+    print("\nHashTable Demonstration:")
+    ht = HashTable()
+    
+    # Insert key-value pairs
+    ht.insert("apple", 5)  # O(1) average time, O(n) worst case, O(1) space
+    ht.insert("banana", 7)  # O(1) average time, O(n) worst case, O(1) space
+    ht.insert("orange", 3)  # O(1) average time, O(n) worst case, O(1) space
+    print("Hash Table after insertions:")
+    print(ht)  # O(n) time, O(1) space where n is the number of elements
+
+    # Retrieve values
+    print("\nRetrieving values:")
+    print("apple:", ht.get("apple"))  # O(1) average time, O(n) worst case, O(1) space
+    print("banana:", ht.get("banana"))  # O(1) average time, O(n) worst case, O(1) space
+
+    # Update a value
+    ht.insert("apple", 10)  # O(1) average time, O(n) worst case, O(1) space
+    print("\nAfter updating 'apple':")
+    print("apple:", ht.get("apple"))  # O(1) average time, O(n) worst case, O(1) space
+
+    # Remove a key-value pair
+    ht.remove("banana")  # O(1) average time, O(n) worst case, O(1) space
+    print("\nAfter removing 'banana':")
+    print(ht)  # O(n) time, O(1) space where n is the number of elements
+
+    # Try to get a non-existent key
+    try:
+        ht.get("grape")  # O(1) average time, O(n) worst case, O(1) space
+    except KeyError:
+        print("\nTried to get 'grape', but it's not in the hash table.")
 
 if __name__ == "__main__":
     main()
